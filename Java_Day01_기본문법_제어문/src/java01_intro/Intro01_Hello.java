@@ -2,9 +2,9 @@ package java01_intro;
 import java.util.Scanner;
 
 public class Intro01_Hello {
-	public class right() {
-		
-	}
+//	public class right() {
+//		
+//	}
 	// 자동완성을 적극적으로 활용!!
 	// main + ctrl + spacebar
 	public static void main(String[] args) {

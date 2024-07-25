@@ -1,8 +1,10 @@
-content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"/>
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="java.lang.ReflectiveOperationException"><rhs name\="java.lang.ClassNotFoundException"/></lhs><lhs name\="java.lang.Exception"><rhs name\="java.lang.ClassNotFoundException"/><rhs name\="java.io.FileNotFoundException"/><rhs name\="test05_user_exception.FruitNotFoundException"/><rhs name\="com.ssafy.hw.step2.NameNotFoundException"/></lhs><lhs name\="java.lang.Throwable"><rhs name\="java.lang.ClassNotFoundException"/><rhs name\="java.io.FileNotFoundException"/><rhs name\="test05_user_exception.FruitNotFoundException"/><rhs name\="com.ssafy.hw.step2.NameNotFoundException"/></lhs><lhs name\="java.lang.ClassNotFoundException"><rhs name\="java.lang.ClassNotFoundException"/></lhs><lhs name\="java.io.InputStream"><rhs name\="java.io.FileInputStream"/></lhs><lhs name\="java.io.Closeable"><rhs name\="java.io.FileInputStream"/></lhs><lhs name\="java.lang.AutoCloseable"><rhs name\="java.io.FileInputStream"/></lhs><lhs name\="java.io.FileInputStream"><rhs name\="java.io.FileInputStream"/></lhs><lhs name\="java.io.IOException"><rhs name\="java.io.FileNotFoundException"/></lhs><lhs name\="java.io.FileNotFoundException"><rhs name\="java.io.FileNotFoundException"/></lhs><lhs name\="test05_user_exception.FruitNotFoundException"><rhs name\="test05_user_exception.FruitNotFoundException"/></lhs><lhs name\="com.ssafy.hw.step2.NameNotFoundException"><rhs name\="com.ssafy.hw.step2.NameNotFoundException"/></lhs></history>
 content_assist_number_of_computers=14
 content_assist_proposals_background=255,255,255
 content_assist_proposals_foreground=0,0,0
 eclipse.preferences.version=1
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
 org.eclipse.jdt.ui.formatterprofiles.version=23
 spelling_locale_initialized=true
 typefilter_migrated_2=true
