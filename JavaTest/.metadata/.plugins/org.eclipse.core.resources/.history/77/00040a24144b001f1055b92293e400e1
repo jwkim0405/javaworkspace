@@ -1,0 +1,81 @@
+package com.ssafy.ws.step2;
+
+public class Movie {
+	int id;
+	String title;
+	String director;
+	String genre;
+	int runningTime;
+	
+	// Movie 객체들을 MovieTest에 만들어줘야 하므로 public !!
+	public Movie() {}
+	
+	public Movie(int id, String title, String director, String genre, int runningTime) {
+		// 여기서 super()를 써도 되고, 안 써도 되지만
+		// 여기서 super()를 쓰면 object를 가리킴!! Movie가 부모니까!!
+		super();
+		
+		this.id = id;
+		this.title = title;
+		this.director = director;
+		this.genre = genre;
+		this.runningTime = runningTime;
+	}
+	
+	// Id getter
+	public int getId() {
+		return id;
+	}
+	
+	// Id setter
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	// title getter
+	public String getTitle() {
+		return title;
+	}
+	
+	// title setter
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	
+	// director getter
+	public String getDirector() {
+		return director;
+	}
+	
+	// director setter
+	public void setDirector(String director) {
+		this.director = director;
+	}
+	
+	// genre getter
+	public String getGenre() {
+		return genre;
+	}
+	
+	// genre setter
+	public void setGenre(String genre) {
+		this.genre = genre;
+	}
+	
+	// runningTime getter
+	public int getRunningTime() {
+		return runningTime;
+	}
+	
+	// runningTime setter
+	public void setRunningTime(int runningTime) {
+		this.runningTime = runningTime;
+	}
+	
+	@Override
+	public String toString() {
+		return "Movie [id: " + id + ", title : " + title + ", this.director : " + director
+				+ ", genre : " + genre + ", runningTime : " + runningTime + " ]"; 
+	}
+	
+}

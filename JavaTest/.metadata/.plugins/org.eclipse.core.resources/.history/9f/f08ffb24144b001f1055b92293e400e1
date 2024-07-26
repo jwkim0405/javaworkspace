@@ -1,0 +1,40 @@
+package com.ssafy.ws.step2;
+
+public class SeriesMovie extends Movie {
+	int seriesNum;
+	String episode;
+	
+	// 외부에서 생성할 수 있도록 public !!
+	public SeriesMovie() {
+		super();
+	}
+	
+	public SeriesMovie(int id, String title, String director, String genre, int runningTime, int SeriesNum, String episode) {
+		super(id, title, director, genre, runningTime);
+		this.seriesNum = SeriesNum;
+		this.episode = episode;
+	}
+	
+	public int getSeriesNum() {
+		return seriesNum;
+	}
+	
+	public void setSeriesNum(int seriesNum) {
+		this.seriesNum = seriesNum;
+	}
+	
+	public String getEpisode() {
+		return episode;
+	}
+	
+	public void setEpisode(String episode) {
+		this.episode = episode;
+	}
+	
+	@Override
+	public String toString() {
+		return "SeriesMovie [id: " + id + ", title : " + title + ", this.director : " + director
+				+ ", genre : " + genre + ", runningTime : " + runningTime + 
+				", seriesNum : " + seriesNum + ", episode : " + episode + " ]"; 
+	}
+}

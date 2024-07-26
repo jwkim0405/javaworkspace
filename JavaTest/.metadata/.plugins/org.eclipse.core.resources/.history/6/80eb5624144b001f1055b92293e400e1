@@ -1,0 +1,104 @@
+package com.ssafy.ws.step2;
+
+import java.util.Arrays;
+
+/**
+ * 도서리스트를 배열로 유지하며 관리하는 클래스
+ */
+public class MovieManagerImpl implements IMovieManager {
+	
+	private final int MAX_SIZE = 100;
+	private Movie[] movieList = new Movie[MAX_SIZE];
+	private int size = 0;
+	
+	// 기본 생성자를 private으로!!
+	// (외부에서 객체를 생성하지 못하도록)
+	private MovieManagerImpl() {}
+
+	private static MovieManagerImpl mm = new MovieManagerImpl();
+	
+	// static을 붙여, 클래스 이름으로 getInstance를 가져와 외부 클래스에서 mm이라는 객체를 mm1과 같은 변수에 저장
+	// static을 붙이지 않으면, 객체를 만들어서 객체.getInstance()를 해야하는데, 싱글톤 패턴으로 만들었기 때문에 외부에서 객체 생성 불가.
+	// 따라서, 당연히 static 붙여야 함!!!
+	public static MovieManagerImpl getInstance() {
+		return mm;
+	}
+		
+	// 영화를 영화 리스트에 추가
+	public void add(Movie movie) {
+		if (size > MAX_SIZE)
+			System.out.println("영화를 100개 저장되어 더 이상 추가할 수 없습니다. 안녕히 돌아가세요~!!");
+		else
+			movieList[size++] = movie;
+
+	}
+	
+	// 등록된 영화 리스트 반환
+	public Movie[] getList() {
+		Movie[] res = Arrays.copyOfRange(movieList, 0, size);
+		return res;	
+	}
+	
+	// 영화 제목을 포함하고 있는 영화 리스트를 반환
+	public Movie[] searchByTitle(String title) throws TitleNotFoundException {
+		int cnt = 0;
+
+		for (int i = 0; i < size; i++) {
+			if (movieList[i].title.contains(title)) {
+				cnt++;
+			}
+		}
+		if (cnt == 0)
+			throw new TitleNotFoundException(title);
+		
+		Movie[] res = new Movie[cnt];
+		
+		int index = 0;
+		for (int i = 0; i < size; i++)
+			if (movieList[i].title.contains(title))
+				res[index++] = movieList[i];
+		
+		return res;
+	}
+
+	// 등록된 영화 중 '일반 영화'만 반환
+	public Movie[] getMovies() {
+		int cnt = 0;
+		for (int i = 0; i < size; i++) 
+			if (!(movieList[i] instanceof SeriesMovie)) 
+				cnt++;
+		
+		Movie[] res = new Movie[cnt];
+		int index = 0;
+		for (int i = 0; i < size; i++) 
+			if (!(movieList[i] instanceof SeriesMovie)) 
+				res[index++] = movieList[i];
+		
+		return res;
+	}
+	
+	// 등록된 영화 중 '시리즈 영화'만 반환
+	public SeriesMovie[] getSeriesMovies() {
+		int cnt = 0;
+		for (int i = 0; i < movieList.length; i++) 
+			if (movieList[i] instanceof SeriesMovie) 
+				cnt++;
+		
+		SeriesMovie[] res = new SeriesMovie[cnt];
+		int index = 0;
+		for (int i = 0; i < movieList.length; i++) 
+			if (movieList[i] instanceof SeriesMovie) 
+				res[index++] = (SeriesMovie) movieList[i];
+		
+		return res;
+	}
+	
+	// 영화 상영시간의 평균을 반환
+	public double getRunningTimeAvg() {
+		double sum = 0;
+		for (int i = 0; i < size; i++) {
+			sum += movieList[i].runningTime;
+		}
+		return sum / size;
+	}
+}

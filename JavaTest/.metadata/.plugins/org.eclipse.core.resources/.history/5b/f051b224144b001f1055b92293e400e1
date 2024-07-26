@@ -1,0 +1,51 @@
+package com.ssafy.ws.step2;
+
+import java.util.Arrays;
+
+public class MovieTest {
+	public static void main(String[] args) {
+		MovieManagerImpl mm = MovieManagerImpl.getInstance();
+		Movie movie1 = new Movie(1, "쇼생크 탈출", "유명한감독님", "감옥탈출", 150);
+		Movie movie2 = new Movie(2, "설국열차", "봉준호", "호러", 120);
+		SeriesMovie smovie1 = new SeriesMovie(3, "어벤저스", "김정우", "히어로", 180, 1, "엔드게임");
+		
+		mm.add(movie1);
+		mm.add(movie2);
+		mm.add(smovie1);
+		
+		
+		// '쇼'라는 단어가 제목에 들어간 영화 반환
+		try {
+			System.out.println(Arrays.toString(mm.searchByTitle("쇼")));
+		} catch(TitleNotFoundException exception) {
+			exception.printStackTrace();
+		}
+		
+		// '탕'라는 단어가 제목에 들어간 영화 반환
+		try {
+			System.out.println(Arrays.toString(mm.searchByTitle("탕")));
+		} catch(TitleNotFoundException exception) {
+			exception.printStackTrace();
+		}
+		
+
+		
+		
+		
+		
+//		// 모든 영화 리스트 반환
+//		System.out.println(Arrays.toString(mm.getList()));
+//				
+//			
+//		// 평균 영화 상영 시간
+//		System.out.println(mm.getRunningTimeAvg());
+//		
+//		// 일반 영화만 반환
+//		System.out.println(Arrays.toString(mm.getMovies()));
+//		
+//		// 시리즈 영화만 반환
+//		System.out.println(Arrays.toString(mm.getSeriesMovies()));
+		
+		
+	}
+}

@@ -1,0 +1,11 @@
+package com.ssafy.ws.step2;
+
+public class Movie {
+	int id;
+	String title;
+	String director;
+	String genre;
+	int runningTime;
+	
+
+}

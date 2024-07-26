@@ -1,0 +1,8 @@
+package com.ssafy.ws.step2;
+
+public class MovieTest {
+	public static void main(String[] args) {
+		Movie m = new Movie();
+		Movie m2 = new Movie(1, "쇼생크 탈출", "유명한 감독님", "감옥탈출", 119);
+	}
+}

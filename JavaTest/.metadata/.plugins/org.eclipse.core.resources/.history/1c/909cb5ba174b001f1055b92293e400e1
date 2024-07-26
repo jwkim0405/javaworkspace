@@ -1,0 +1,20 @@
+package com.ssafy.ws.step2;
+
+import java.util.Arrays;
+
+public class MovieTest {
+	public static void main(String[] args) {
+		Movie m1 = new Movie();
+		m1.id = 1;
+		m1.title = "설국열차";
+		m1.director = "봉준호";
+		m1.genre = "SF";
+		m1.runningTime = 150;
+		
+		Movie m2 = new Movie(2, "쇼생크 탈출", "유명한 감독님", "감옥탈출", 119);
+		
+		System.out.println(m1.toString());
+//		System.out.println(Arrays.toString(m2));
+		
+	}
+}

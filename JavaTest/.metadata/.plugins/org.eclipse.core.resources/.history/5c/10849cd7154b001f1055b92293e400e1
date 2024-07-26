@@ -1,0 +1,9 @@
+package com.ssafy.ws.step2;
+
+public class MovieTest {
+	public static void main(String[] args) {
+		float f = 100.3f;
+		byte b = (byte)8;
+		System.out.println(b);
+	}
+}
